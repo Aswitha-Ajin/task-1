@@ -1,0 +1,35 @@
+
+1.Difference between HTTP 1.1 and HTTP 2
+
+HTTP 1.1:
+    HTTP 1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it.
+    It keeps all requests and responses in plain text format.
+    HTTP/1.1 does not provide a method for a server to direct clients to discard these cached credentials which is a big security risk.
+    
+HTTP 2:
+    HTTP 2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource. 
+    HTTP 2 uses the binary framing layer hence,it is more secure as it uses binary protocol instead of plaintext.
+    HTTP2 uses header compression to reduce overhead and also highly secured.
+
+2.Object and its internal representation in java script.
+   Object is a key value pair of structure for easy representation and accessibility.Object are important datatype in javascript.Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types.An object, is a reference data type. Variables that are assigned a reference value are given a reference or a pointer to that value. That reference or pointer points to the location in memory where the object is stored. The variables don’t actually store the value. Every object has some property associated with some value. These values can be accessed using these properties associated with them.An object can be created with figure brackets {} with an optional list of properties.A property is a key: value pair, where a key is the property name, value can be anything. Syntax for object is var objectname={k:v};
+Example:-
+var college = {
+Name : "St.xaviers",
+location : "Nagercoil",
+}
+ In the above example “Name”, “location”,are all “keys” and “St.xaviers”, “Nagercoil”  are values of these keys respectively .
+Creating objects 
+ One of easiest way to create a javascript object is object literal, simply define the property and values inside curly braces,
+
+var car = {name: "dzire", maker:"suzuki"};
+Object with constructor.
+Constructor is nothing but a function and with help of new keyword, constructor function allows to create multiple objects of same flavor 
+
+function Vehicle(name, maker) {
+   this.name = name;
+   this.maker = maker;
+}
+var car1 = new Vehicle("dzire", "suzuki");
+
+console.log(car1.name);    
